@@ -1,0 +1,23 @@
+{
+  "name": "devtinder",
+  "version": "1.0.0",
+  "description": "Tinder for developers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajeshn67/DEVTINDER.git"
+  },
+  "keywords": [
+    "nodejs",
+    "javascript"
+  ],
+  "author": "Rajesh Narwade",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rajeshn67/DEVTINDER/issues"
+  },
+  "homepage": "https://github.com/rajeshn67/DEVTINDER#readme"
+}
