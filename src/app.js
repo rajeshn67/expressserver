@@ -1,17 +1,45 @@
 const express = require('express');
 const app = express();
-app.use("/Home", (req, res)=> {
+//order of routes are matters
+//....
+
+// This will only handele GET call to /user 
+app.get("/user", (req, res)=> {
   
-     res.send('Hello from the server side... for home ');
+    res.send({firstname:"Rajesh",Lastname:"Narwade"}); 
 });
-app.use("/login", (req, res)=> {
+
+
+ app.post("/user", (req, res)=> {
+    // saving data to the database
+   res.send('data susccessfully saved to the database');
+ }); 
+ app.delete("/user", (req, res)=> {
+    // delete data from the database
+   res.send('data susccessfully deleted from the database');
+ });  
+
+
+//this will match all the http methods API calls to /test
+app.use("/test", (req, res)=> {
   
-    res.send('Hello from the server side... for login');
+    res.send('Hello from the server side... Test');
 });
-app.use("/dashboard", (req, res)=> {
+
+
+
+// app.use("/login", (req, res)=> {
   
-    res.send('Hello from the server side... for dashboard');
-});
+//     res.send('Hello from the server side... for login');
+// });
+// app.use("/dashboard", (req, res)=> {
+  
+//     res.send('Hello from the server side... for dashboard');
+// });
+// app.use("/", (req, res)=> {
+  
+//     res.send('Hello from the server side... for home ');
+// });
 app.listen(3000 ,()=> { 
     console.log('Server is running on port 3000');
 });
